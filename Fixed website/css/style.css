@@ -10,11 +10,9 @@ body {
 a,
 button {
   transition: all 0.3s ease-in-out;
-  outline: none;
 }
 
 a:hover {
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -100,10 +98,11 @@ a:hover {
 }
 
 .d-bloc {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(255, 255, 255);
 }
 
-.d-bloc button:hover {
+.d-bloc button:hover,
+.d-bloc button:focus {
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -119,46 +118,13 @@ a:hover {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.d-bloc .a-btn,
-.d-bloc .navbar a,
-.d-bloc .navbar-brand,
-.d-bloc a .icon-sm,
-.d-bloc a .icon-md,
-.d-bloc a .icon-lg,
-.d-bloc a .icon-xl,
-.d-bloc h1 a,
-.d-bloc h2 a,
-.d-bloc h3 a,
-.d-bloc h4 a,
-.d-bloc h5 a,
-.d-bloc h6 a,
-.d-bloc p a {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.d-bloc .a-btn:hover,
-.d-bloc .navbar a:hover,
-.d-bloc .navbar-brand:hover,
-.d-bloc a:hover .icon-sm,
-.d-bloc a:hover .icon-md,
-.d-bloc a:hover .icon-lg,
-.d-bloc a:hover .icon-xl,
-.d-bloc h1 a:hover,
-.d-bloc h2 a:hover,
-.d-bloc h3 a:hover,
-.d-bloc h4 a:hover,
-.d-bloc h5 a:hover,
-.d-bloc h6 a:hover,
-.d-bloc p a:hover {
-  color: rgba(255, 255, 255, 1);
-}
-
 .d-bloc .navbar-toggle .icon-bar {
   background: rgba(255, 255, 255, 1);
 }
 
 .d-bloc .btn-wire,
-.d-bloc .btn-wire:hover {
+.d-bloc .btn-wire:hover,
+.d-bloc .btn-wire:focus {
   color: rgba(255, 255, 255, 1);
   border-color: rgba(255, 255, 255, 1);
 }
@@ -167,7 +133,8 @@ a:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.d-bloc .panel button:hover {
+.d-bloc .panel button:hover,
+.d-bloc .panel button:focus {
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -183,12 +150,14 @@ a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.d-bloc .panel .a-btn:hover {
+.d-bloc .panel .a-btn:hover,
+.d-bloc .panel .a-btn:focus {
   color: rgba(0, 0, 0, 1);
 }
 
 .d-bloc .panel .btn-wire,
-.d-bloc .panel .btn-wire:hover {
+.d-bloc .panel .btn-wire:hover,
+.d-bloc .panel .btn-wire:focus {
   color: rgba(0, 0, 0, 0.7);
   border-color: rgba(0, 0, 0, 0.3);
 }
@@ -196,11 +165,6 @@ a:hover {
 .d-bloc .panel,
 .l-bloc {
   color: rgba(0, 0, 0, 0.5);
-}
-
-.d-bloc .panel button:hover,
-.l-bloc button:hover {
-  color: rgba(0, 0, 0, 0.7);
 }
 
 .l-bloc .icon-round,
@@ -252,6 +216,24 @@ a:hover {
   color: rgba(0, 0, 0, 1);
 }
 
+.d-bloc .panel .a-btn:focus,
+.l-bloc .a-btn:focus,
+.l-bloc .navbar a:focus,
+.l-bloc .navbar-brand:focus,
+.l-bloc a:focus .icon-sm,
+.l-bloc a:focus .icon-md,
+.l-bloc a:focus .icon-lg,
+.l-bloc a:focus .icon-xl,
+.l-bloc h1 a:focus,
+.l-bloc h2 a:focus,
+.l-bloc h3 a:focus,
+.l-bloc h4 a:focus,
+.l-bloc h5 a:focus,
+.l-bloc h6 a:focus,
+.l-bloc p a:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
 .l-bloc .navbar-toggle .icon-bar {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -259,7 +241,9 @@ a:hover {
 .d-bloc .panel .btn-wire,
 .d-bloc .panel .btn-wire:hover,
 .l-bloc .btn-wire,
-.l-bloc .btn-wire:hover {
+.l-bloc .btn-wire:hover,
+.d-bloc .panel .btn-wire:focus,
+.l-bloc .btn-wire:focus {
   color: rgba(0, 0, 0, 0.7);
   border-color: rgba(0, 0, 0, 0.3);
 }
@@ -335,6 +319,7 @@ a:hover {
 .nav > li a:hover,
 .nav > li a:focus {
   background: transparent;
+  text-decoration: underline;
 }
 
 .navbar-toggle {
@@ -342,7 +327,8 @@ a:hover {
   border: 0px;
 }
 
-.navbar-toggle:hover {
+.navbar-toggle:hover,
+.navbar-toggle:focus {
   background: transparent;
 }
 
@@ -460,10 +446,6 @@ nav .caret {
   background: rgba(0, 0, 0, 0.3);
 }
 
-button {
-  outline: none;
-}
-
 .btn-rd {
   border-radius: 40px;
 }
@@ -537,7 +519,8 @@ a[data-lightbox] {
   text-align: center;
 }
 
-a[data-lightbox]:hover::before {
+a[data-lightbox]:hover::before,
+a[data-lightbox]:focus::before {
   content: "+";
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial;
@@ -556,7 +539,8 @@ a[data-lightbox]:hover::before {
   -webkit-transform: translateY(-50%);
 }
 
-a[data-lightbox]:hover img {
+a[data-lightbox]:hover img,
+a[data-lightbox]:focus img {
   opacity: 0.6;
   -webkit-animation-fill-mode: none;
   animation-fill-mode: none;
@@ -604,7 +588,10 @@ a[data-lightbox]:hover img {
 
 .close-lightbox:hover,
 .next-lightbox:hover,
-.prev-lightbox:hover {
+.prev-lightbox:hover,
+.close-lightbox:focus,
+.next-lightbox:focus,
+.prev-lightbox:focus {
   opacity: 1;
   color: #fff;
 }
@@ -650,10 +637,11 @@ h6,
 p,
 label,
 .btn,
-a {
+a,
+figcaption {
   font-family: "helvetica";
   font-weight: 400;
-  color: #575757;
+  color: #404040;
 }
 
 .container {
@@ -679,7 +667,7 @@ a {
 }
 
 p {
-  font-size: 11px;
+  font-size: 16px;
 }
 
 .tight-width-whitespace {
@@ -782,11 +770,12 @@ h4 {
 
 .btn-atomic-tangerine {
   background: #f3976c;
-  color: #ffffff;
+  color: #404040;
 }
 
-.btn-atomic-tangerine:hover {
-  background: #c27956;
+.btn-atomic-tangerine:hover,
+.btn-atomic-tangerine:focus {
+  background: #ac613e;
   color: #ffffff;
 }
 
@@ -794,7 +783,8 @@ h4 {
   color: #ffffff;
 }
 
-.ltc-white:hover {
+.ltc-white:hover,
+.ltc-white:focus {
   color: #cccccc;
 }
 
@@ -802,8 +792,9 @@ h4 {
   color: #f3976c;
 }
 
-.ltc-atomic-tangerine:hover {
-  color: #c27956;
+.ltc-atomic-tangerine:hover,
+.ltc-atomic-tangerine:focus {
+  color: #ac613e;
 }
 
 .icon-dark-slate-blue {
@@ -929,7 +920,8 @@ h4 {
     padding-left: 15px;
     width: 100%;
   }
-  .nav > li:hover {
+  .nav > li:hover,
+  .nav > li:focus {
     background: rgba(0, 0, 0, 0.08);
   }
   .dropdown .dropdown a .caret {
