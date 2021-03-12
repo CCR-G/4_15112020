@@ -1,7 +1,7 @@
 # Projet 4 - Optimisez un site web existant 
 OpenClassrooms - Parcours développeur web
 
-**Project #2 - Optimize an Existing Website**<br>
+**Project #4 - Optimize an Existing Website**<br>
 OpenClassrooms - Web developper training
 
 ## Links to the GitHub pages
